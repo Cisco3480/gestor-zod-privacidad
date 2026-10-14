@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Política de privacidad — Gestor Personal Zod</title>
+<style>
+  :root{--bg:#fafaf7;--fg:#1d1d1b;--muted:#5c5c57;--line:#e3e2dc;--accent:#2f5d50}
+  @media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe6;--muted:#a8a69e;--line:#2c2b28;--accent:#7fb8a4}body .faq-btn{color:#141413}}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  main{max-width:720px;margin:0 auto;padding:40px 20px 96px}h1{font-size:1.6rem;line-height:1.25}h2{font-size:1.1rem;margin-top:2rem}
+  p,li{color:var(--fg)}small,.muted{color:var(--muted)}a{color:var(--accent)}hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+  .faq-btn{position:fixed;right:16px;bottom:16px;border:0;border-radius:999px;padding:12px 16px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .faq{position:fixed;right:16px;bottom:72px;width:min(340px,calc(100vw - 32px));max-height:60vh;overflow:auto;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:none;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .faq.open{display:block}.faq h3{font-size:1rem;margin:.6rem 0 .2rem}.faq p{margin:0 0 .4rem;font-size:.92rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de privacidad — Gestor Personal Zod</h1>
+  <p class="muted">Última actualización: 13 de octubre de 2026</p>
+
+  <h2>Qué es</h2>
+  <p>«Gestor Personal Zod» es una herramienta <strong>privada y de uso personal</strong>: la usa una sola persona, su dueño, para organizar <strong>su propio</strong> correo de Gmail. No es un servicio para el público, no tiene usuarios externos y no se ofrece a terceros.</p>
+
+  <h2>Qué datos usa y para qué</h2>
+  <ul>
+    <li>Con permiso explícito del dueño de la cuenta, la herramienta <strong>lee</strong> sus correos recientes (remitente, asunto, fecha y contenido) para hacerle un resumen privado.</li>
+    <li>Puede <strong>crear borradores</strong> de respuesta en esa misma cuenta. <strong>Nunca envía correos</strong>: el dueño revisa y envía él mismo, si quiere.</li>
+    <li>No borra, archiva ni modifica correos.</li>
+  </ul>
+
+  <h2>Con quién se comparte</h2>
+  <ul>
+    <li>Los datos se usan solo para generar el resumen del propio dueño. <strong>No se venden, no se usan para publicidad y no se comparten</strong> con terceros.</li>
+    <li>Para redactar el resumen, el contenido de los correos se procesa con el modelo de IA Claude de Anthropic, a través de su API, únicamente para devolver ese resumen.</li>
+    <li>El acceso a Gmail se hace con la API oficial de Google. El permiso se guarda cifrado en un servidor privado del dueño y puede revocarse en cualquier momento.</li>
+  </ul>
+
+  <h2>Uso de datos de las API de Google</h2>
+  <p>El uso y la transferencia de la información recibida de las API de Google se ajustan a la <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de datos de usuario de los servicios de API de Google</a>, incluidos sus requisitos de uso limitado.</p>
+
+  <h2>Conservación y revocación</h2>
+  <p>No se guardan copias de los correos: el resumen se genera y se entrega al dueño. El dueño puede retirar el acceso en cualquier momento desde <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</p>
+
+  <h2>Contacto</h2>
+  <p>Para cualquier consulta, usa el correo de soporte que aparece en la pantalla de autorización de Google de esta aplicación.</p>
+
+  <hr>
+  <p><a href="./">← Volver al inicio</a></p>
+</main>
+
+<button class="faq-btn" aria-expanded="false" aria-controls="faq">Preguntas</button>
+<aside class="faq" id="faq" aria-label="Preguntas frecuentes">
+  <h3>¿Esto envía correos?</h3><p>No. Solo lee y crea borradores; enviar lo hace siempre el dueño a mano.</p>
+  <h3>¿Quién lo usa?</h3><p>Una sola persona, para su propia cuenta. No es un servicio público.</p>
+  <h3>¿Cómo quito el acceso?</h3><p>En myaccount.google.com/permissions, en «Gestor Personal Zod», pulsa «Quitar acceso».</p>
+</aside>
+<script>
+  const b=document.querySelector('.faq-btn'),f=document.getElementById('faq');
+  b.addEventListener('click',()=>{const o=f.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+</script>
+</body>
+</html>
